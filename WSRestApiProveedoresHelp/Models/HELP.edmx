@@ -1,0 +1,996 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="helpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="help_Atenciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Poliza" Type="varchar" MaxLength="50" />
+          <Property Name="Certificado" Type="varchar" MaxLength="50" />
+          <Property Name="RefIdentificacionTipo" Type="int" />
+          <Property Name="Identificacion" Type="varchar" MaxLength="50" />
+          <Property Name="TelefonoOrigen" Type="int" />
+          <Property Name="Cliente" Type="varchar" MaxLength="150" />
+          <Property Name="RefTipoServicioId" Type="int" />
+          <Property Name="FechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="RefAgenteId" Type="int" />
+          <Property Name="RefProveedorId" Type="int" />
+          <Property Name="RefClienteId" Type="int" />
+          <Property Name="RefEstadoId" Type="int" />
+          <Property Name="RefCiudadId" Type="int" />
+          <Property Name="RefColoniaId" Type="int" />
+          <Property Name="PagoCliente" Type="int" />
+          <Property Name="FechaPagoCliente" Type="datetime" />
+          <Property Name="IdPoliza" Type="int" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="500" />
+          <Property Name="LatitudCliente" Type="float" />
+          <Property Name="LongitudCliente" Type="float" />
+          <Property Name="RefGestorId" Type="int" />
+          <Property Name="RazonCancelacion" Type="varchar" MaxLength="1000" />
+          <Property Name="TelefonoReportante" Type="int" />
+          <Property Name="PersonaReporta" Type="varchar" MaxLength="150" />
+          <Property Name="IdConvenio" Type="int" />
+          <Property Name="NombreConvenio" Type="varchar" MaxLength="150" />
+          <Property Name="RefPaisId" Type="int" />
+          <Property Name="Zona" Type="varchar" MaxLength="500" />
+          <Property Name="DireccionDestino" Type="varchar" MaxLength="500" />
+          <Property Name="NombreCorredor" Type="varchar" MaxLength="150" />
+          <Property Name="PolizaExterna" Type="varchar" MaxLength="50" />
+          <Property Name="NombreConductor" Type="varchar" MaxLength="150" />
+          <Property Name="Plan" Type="varchar" MaxLength="50" />
+          <Property Name="TelefonoAdicional" Type="int" />
+          <Property Name="NombreAdicional" Type="varchar" MaxLength="50" />
+          <Property Name="DatosOrigen" Type="varchar" MaxLength="50" />
+          <Property Name="RefPlanId" Type="int" />
+          <Property Name="Empresa" Type="int" />
+          <Property Name="SubEmpresa" Type="int" />
+          <Property Name="AutorizacionEstado" Type="int" />
+          <Property Name="TiempoCreacion" Type="time" Precision="7" />
+          <Property Name="TiempoRegistro" Type="time" Precision="7" />
+          <Property Name="TiempoAsignacion" Type="time" Precision="7" />
+          <Property Name="FechaDeAccidente" Type="date" />
+          <Property Name="Taller" Type="varchar" MaxLength="500" />
+          <Property Name="HoraDeAccidente" Type="time" Precision="7" />
+          <Property Name="HoraAsigancionProveedor" Type="time" Precision="7" />
+          <Property Name="ServicioAutorizadoPorFICO" Type="varchar" MaxLength="250" />
+          <Property Name="MotivoAutorizadoPorFICO" Type="varchar" MaxLength="2500" />
+          <Property Name="Parentesco" Type="varchar" MaxLength="150" />
+          <Property Name="Llantas" Type="varchar" MaxLength="50" />
+          <Property Name="Cristales" Type="varchar" MaxLength="50" />
+          <Property Name="Reserva1" Type="varchar" MaxLength="50" />
+          <Property Name="Reserva2" Type="varchar" MaxLength="50" />
+          <Property Name="Reserva3" Type="varchar" MaxLength="50" />
+          <Property Name="RefDepartamentoId" Type="int" />
+          <Property Name="RefMunicipioId" Type="int" />
+          <Property Name="TipoSiniestro" Type="varchar" MaxLength="50" />
+          <Property Name="TipoVehiculo" Type="varchar" MaxLength="50" />
+          <Property Name="NumeroUnidad" Type="varchar" MaxLength="50" />
+          <Property Name="Deducible" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ValorReserva" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Moneda" Type="varchar" MaxLength="50" />
+          <Property Name="CAMPOTEMPIDATENCION" Type="int" />
+          <Property Name="CorreoCliente" Type="varchar" MaxLength="50" />
+          <Property Name="RefUsuarioCierreId" Type="int" />
+          <Property Name="FechaCierre" Type="datetime" />
+          <Property Name="Localidad" Type="varchar" MaxLength="50" />
+          <Property Name="RazonCancelacionProveedor" Type="varchar" MaxLength="1000" />
+          <Property Name="RefPaisIdDestino" Type="int" />
+          <Property Name="RefCiudadIdDestino" Type="int" />
+          <Property Name="RefDepartamentoIdDestino" Type="int" />
+          <Property Name="RefMunicipioIdDestino" Type="int" />
+          <Property Name="RefColoniaIdDestino" Type="int" />
+          <Property Name="LatitudDestino" Type="varchar" MaxLength="20" />
+          <Property Name="LongitudDestino" Type="varchar" MaxLength="20" />
+          <Property Name="LatitudRefKm" Type="varchar" MaxLength="20" />
+          <Property Name="LongitudRefKm" Type="varchar" MaxLength="20" />
+          <Property Name="UsuarioIdVerifico" Type="int" />
+          <Property Name="ObservacionUsuarioVerifico" Type="varchar" MaxLength="500" />
+          <Property Name="FechaVerfico" Type="datetime" />
+          <Property Name="EstadoVerifco" Type="int" />
+          <Property Name="TelefonoTitularPoliza" Type="int" />
+          <Property Name="PlacaReportada" Type="varchar" MaxLength="20" />
+          <Property Name="CreaVehiculoSimilar" Type="bit" />
+          <Property Name="RefAgenteAsignadoId" Type="int" />
+          <Property Name="Reembolso" Type="int" />
+          <Property Name="esAppMovil" Type="int" />
+          <Property Name="OrigenAtencion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="help_Atenciones_Fotografias">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RefAtencionId" Type="int" Nullable="false" />
+          <Property Name="Fotografia" Type="varbinary(max)" Nullable="false" />
+          <Property Name="RefUsuarioId" Type="int" Nullable="false" />
+          <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="Latitud" Type="float" />
+          <Property Name="Longitud" Type="float" />
+          <Property Name="NombreFoto" Type="varchar" MaxLength="500" />
+          <Property Name="TipoFoto" Type="varchar" MaxLength="50" />
+          <Property Name="RefTipoId" Type="int" />
+          <Property Name="NombreFirmante" Type="varchar" MaxLength="150" />
+          <Property Name="FechaFirma" Type="datetime" />
+          <Property Name="Decripcion" Type="varchar" MaxLength="500" />
+          <Property Name="OrigenId" Type="int" />
+          <Property Name="NombreOriginal" Type="nvarchar" MaxLength="260" />
+          <Property Name="HashSha256Cliente" Type="char" MaxLength="64" />
+          <Property Name="Extension" Type="varchar" MaxLength="10" />
+          <Property Name="TamanoBytes" Type="bigint" />
+          <Property Name="AnchoPixels" Type="int" />
+          <Property Name="AltoPixels" Type="int" />
+          <Property Name="OrientacionExif" Type="smallint" />
+          <Property Name="TieneExif" Type="bit" />
+          <Property Name="FechaCapturaOriginal" Type="datetime2" Precision="3" />
+          <Property Name="OffsetCapturaOriginal" Type="varchar" MaxLength="6" />
+          <Property Name="FuenteFechaCaptura" Type="varchar" MaxLength="25" />
+          <Property Name="FechaUltimaModificacion" Type="datetimeoffset" Precision="3" />
+          <Property Name="FechaSeleccionDispositivo" Type="datetimeoffset" Precision="3" />
+          <Property Name="FabricanteDispositivo" Type="nvarchar" MaxLength="100" />
+          <Property Name="ModeloDispositivo" Type="nvarchar" MaxLength="150" />
+          <Property Name="SoftwareEdicion" Type="nvarchar" MaxLength="150" />
+          <Property Name="AltitudExifMetros" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="PrecisionGpsExif" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="HashSha256Servidor" Type="char" MaxLength="64" />
+          <Property Name="HashCoincide" Type="bit" />
+          <Property Name="AlgoritmoHash" Type="varchar" MaxLength="16" />
+          <Property Name="MetadataJson" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="help_Atenciones_Servicios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RefAtencionId" Type="int" Nullable="false" />
+          <Property Name="RefTipoServicioId" Type="int" Nullable="false" />
+          <Property Name="FechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="RefAgenteId" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RefProveedorId" Type="int" />
+          <Property Name="RefIdEstado" Type="int" />
+          <Property Name="Kilometraje" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KilometrajePrecio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KilometrajeValorTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PrecioUnitario" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioCobertura" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Precio_Evento" Type="varchar" MaxLength="5" />
+          <Property Name="PrecioTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TasaCambio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Pactado" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Evento" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TipoCosto" Type="varchar" MaxLength="50" />
+          <Property Name="CostoBase" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoMaterialHogar" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_Cliente" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_CIA" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_Cliente_TC" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OtrosCostos" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoServicio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedido" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedidoConvenio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentajeComision" Type="int" />
+          <Property Name="ValorComision" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PagadoClienteHELP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PagadoClienteProveedor" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ValorConvenio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ComisionConvenio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DescuentoHelp" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CoberturaHELP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CxPProveedor" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoHELP" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="QuienCobroExcesoCliente" Type="varchar" MaxLength="150" />
+          <Property Name="FormaPagoExcesoCliente" Type="varchar" MaxLength="150" />
+          <Property Name="ReferenciaPagoExceso" Type="varchar" MaxLength="150" />
+          <Property Name="QuienCobroMateriales" Type="varchar" MaxLength="150" />
+          <Property Name="FormaPagoMateriales" Type="varchar" MaxLength="150" />
+          <Property Name="FechaFinalizacion" Type="datetime" />
+          <Property Name="ReferenciaPagoMateriales" Type="varchar" MaxLength="150" />
+          <Property Name="RefProveedorAgenteId" Type="int" />
+          <Property Name="RefAutorizacionPrecioEvento" Type="int" />
+          <Property Name="RefUsuarioAutorizacionPrecioEvento" Type="int" />
+          <Property Name="FechaAutorizacionPrecioEvento" Type="datetime" />
+          <Property Name="RefAtencionServicioId" Type="int" />
+          <Property Name="EstadoPago" Type="int" />
+          <Property Name="RanzonCambio" Type="varchar" MaxLength="500" />
+          <Property Name="FechaProgramada" Type="datetime" />
+          <Property Name="CostoTotalAnterior" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedidoAnterior" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CxPProveedorAnterior" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CuentaContable" Type="varchar" MaxLength="25" />
+          <Property Name="CentroCosto" Type="varchar" MaxLength="25" />
+          <Property Name="BeneficioCodigo" Type="varchar" MaxLength="5" />
+          <Property Name="BeneficioNombre" Type="varchar" MaxLength="250" />
+          <Property Name="CodigoSoftland" Type="varchar" MaxLength="50" />
+          <Property Name="PorcentajeComisionReferencia" Type="int" />
+          <Property Name="ValorComisionReferencia" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DescripcionItem" Type="varchar" MaxLength="1000" />
+          <Property Name="CoberturaReconocidaConvenio" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="MontoEvento" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="QuienCobroOtrosCostos" Type="varchar" MaxLength="50" />
+          <Property Name="FormaPagoOtrosCostos" Type="varchar" MaxLength="50" />
+          <Property Name="ReferenciaPagoOtrosCostos" Type="varchar" MaxLength="50" />
+          <Property Name="ValidacionPendiente" Type="bit" />
+          <Property Name="IdUsuarioRegistro" Type="int" />
+          <Property Name="FechaUsuarioRegistro" Type="datetime" />
+          <Property Name="IdUsuarioCierre" Type="int" />
+          <Property Name="FechaUsuarioCierre" Type="datetime" />
+          <Property Name="ProveedorPagado" Type="bit" />
+          <Property Name="RefExcedentesId" Type="int" />
+        </EntityType>
+        <EntityType Name="help_RefAgenteEstado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="150" />
+          <Property Name="Icono" Type="text" />
+          <Property Name="Color" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <Association Name="FK_help_Atenciones_Servicios_help_Atenciones">
+          <End Role="help_Atenciones" Type="Self.help_Atenciones" Multiplicity="1" />
+          <End Role="help_Atenciones_Servicios" Type="Self.help_Atenciones_Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="help_Atenciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="help_Atenciones_Servicios">
+              <PropertyRef Name="RefAtencionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_help_AtencionesFotografias_help_Atenciones">
+          <End Role="help_Atenciones" Type="Self.help_Atenciones" Multiplicity="1" />
+          <End Role="help_Atenciones_Fotografias" Type="Self.help_Atenciones_Fotografias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="help_Atenciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="help_Atenciones_Fotografias">
+              <PropertyRef Name="RefAtencionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="help_F_Api_Obtener_Mi_Atencion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAtencion" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Id" Type="int" Nullable="false" />
+                <Property Name="Poliza" Type="varchar" MaxLength="50" />
+                <Property Name="Plan" Type="varchar" MaxLength="50" />
+                <Property Name="Certificado" Type="varchar" MaxLength="50" />
+                <Property Name="RefIdentificacionTipo" Type="int" />
+                <Property Name="Identificacion" Type="varchar" MaxLength="50" />
+                <Property Name="TelefonoOrigen" Type="int" />
+                <Property Name="Cliente" Type="varchar" MaxLength="150" />
+                <Property Name="RefTipoServicioId" Type="int" />
+                <Property Name="FechaInicio" Type="datetime" />
+                <Property Name="FechaFin" Type="datetime" />
+                <Property Name="RefAgenteId" Type="int" />
+                <Property Name="RefProveedorId" Type="int" />
+                <Property Name="RefClienteId" Type="int" />
+                <Property Name="RefEstadoId" Type="int" />
+                <Property Name="RefCiudadId" Type="int" />
+                <Property Name="RefColoniaId" Type="int" />
+                <Property Name="FechaPagoCliente" Type="datetime" />
+                <Property Name="IdPoliza" Type="int" />
+                <Property Name="Direccion" Type="varchar" MaxLength="500" />
+                <Property Name="Observaciones" Type="varchar" MaxLength="500" />
+                <Property Name="LatitudCliente" Type="float" />
+                <Property Name="LongitudCliente" Type="float" />
+                <Property Name="RefGestorId" Type="int" />
+                <Property Name="TiempoMaximoEspera" Type="time" Precision="7" />
+                <Property Name="IdEstadoAtencion" Type="int" Nullable="false" />
+                <Property Name="LbEstado" Type="varchar" MaxLength="150" Nullable="false" />
+                <Property Name="ColorEstado" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="LbTipoServicio" Type="varchar" MaxLength="150" Nullable="false" />
+                <Property Name="IdCategoriaServicio" Type="int" Nullable="false" />
+                <Property Name="IdCategoria" Type="int" Nullable="false" />
+                <Property Name="LbCategoriaServicio" Type="varchar" MaxLength="100" Nullable="false" />
+                <Property Name="IconClassName" Type="varchar" MaxLength="50" />
+                <Property Name="UsuarioRegistroNombre" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="LbConvenio" Type="varchar" MaxLength="150" Nullable="false" />
+                <Property Name="LbPlan" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="NombreProveedor" Type="varchar" MaxLength="500" Nullable="false" />
+                <Property Name="Pais" Type="nvarchar" MaxLength="50" Nullable="false" />
+                <Property Name="RefPaisId" Type="int" />
+                <Property Name="Zona" Type="varchar" MaxLength="500" />
+                <Property Name="DireccionDestino" Type="varchar" MaxLength="500" />
+                <Property Name="EstadoServicio" Type="varchar" MaxLength="50" />
+                <Property Name="Ciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
+                <Property Name="Colonia" Type="nvarchar" MaxLength="150" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="help_P_SetSeguimiento_Manual_Mejorado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAtencion" Type="int" Mode="In" />
+          <Parameter Name="IdAtencionServicio" Type="int" Mode="In" />
+          <Parameter Name="Latitud" Type="float" Mode="In" />
+          <Parameter Name="Longitud" Type="float" Mode="In" />
+          <Parameter Name="TipoSeguimiento" Type="int" Mode="In" />
+          <Parameter Name="Observacion" Type="text" Mode="In" />
+          <Parameter Name="IdUsuario" Type="int" Mode="In" />
+          <Parameter Name="RefEstadoSeguimiento" Type="int" Mode="In" />
+          <Parameter Name="RefUsuarioId" Type="int" Mode="In" />
+          <Parameter Name="RefEstadoSeguimientoUpdate" Type="int" Mode="In" />
+          <Parameter Name="Respuesta" Type="int" Mode="InOut" />
+          <Parameter Name="Mensaje" Type="varchar(max)" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="helpModelStoreContainer">
+          <EntitySet Name="help_Atenciones" EntityType="Self.help_Atenciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="help_Atenciones_Fotografias" EntityType="Self.help_Atenciones_Fotografias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="help_Atenciones_Servicios" EntityType="Self.help_Atenciones_Servicios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="help_RefAgenteEstado" EntityType="Self.help_RefAgenteEstado" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_help_Atenciones_Servicios_help_Atenciones" Association="Self.FK_help_Atenciones_Servicios_help_Atenciones">
+            <End Role="help_Atenciones" EntitySet="help_Atenciones" />
+            <End Role="help_Atenciones_Servicios" EntitySet="help_Atenciones_Servicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_help_AtencionesFotografias_help_Atenciones" Association="Self.FK_help_AtencionesFotografias_help_Atenciones">
+            <End Role="help_Atenciones" EntitySet="help_Atenciones" />
+            <End Role="help_Atenciones_Fotografias" EntitySet="help_Atenciones_Fotografias" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="helpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="help_Atenciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Poliza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Certificado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefIdentificacionTipo" Type="Int32" />
+          <Property Name="Identificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonoOrigen" Type="Int32" />
+          <Property Name="Cliente" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="RefTipoServicioId" Type="Int32" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Precision="3" />
+          <Property Name="RefAgenteId" Type="Int32" />
+          <Property Name="RefProveedorId" Type="Int32" />
+          <Property Name="RefClienteId" Type="Int32" />
+          <Property Name="RefEstadoId" Type="Int32" />
+          <Property Name="RefCiudadId" Type="Int32" />
+          <Property Name="RefColoniaId" Type="Int32" />
+          <Property Name="PagoCliente" Type="Int32" />
+          <Property Name="FechaPagoCliente" Type="DateTime" Precision="3" />
+          <Property Name="IdPoliza" Type="Int32" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LatitudCliente" Type="Double" />
+          <Property Name="LongitudCliente" Type="Double" />
+          <Property Name="RefGestorId" Type="Int32" />
+          <Property Name="RazonCancelacion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonoReportante" Type="Int32" />
+          <Property Name="PersonaReporta" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="IdConvenio" Type="Int32" />
+          <Property Name="NombreConvenio" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="RefPaisId" Type="Int32" />
+          <Property Name="Zona" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DireccionDestino" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NombreCorredor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PolizaExterna" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NombreConductor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Plan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonoAdicional" Type="Int32" />
+          <Property Name="NombreAdicional" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DatosOrigen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefPlanId" Type="Int32" />
+          <Property Name="Empresa" Type="Int32" />
+          <Property Name="SubEmpresa" Type="Int32" />
+          <Property Name="AutorizacionEstado" Type="Int32" />
+          <Property Name="TiempoCreacion" Type="Time" Precision="7" />
+          <Property Name="TiempoRegistro" Type="Time" Precision="7" />
+          <Property Name="TiempoAsignacion" Type="Time" Precision="7" />
+          <Property Name="FechaDeAccidente" Type="DateTime" Precision="0" />
+          <Property Name="Taller" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="HoraDeAccidente" Type="Time" Precision="7" />
+          <Property Name="HoraAsigancionProveedor" Type="Time" Precision="7" />
+          <Property Name="ServicioAutorizadoPorFICO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MotivoAutorizadoPorFICO" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="Parentesco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Llantas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cristales" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reserva1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reserva2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reserva3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefDepartamentoId" Type="Int32" />
+          <Property Name="RefMunicipioId" Type="Int32" />
+          <Property Name="TipoSiniestro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TipoVehiculo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroUnidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Deducible" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ValorReserva" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Moneda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CAMPOTEMPIDATENCION" Type="Int32" />
+          <Property Name="CorreoCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefUsuarioCierreId" Type="Int32" />
+          <Property Name="FechaCierre" Type="DateTime" Precision="3" />
+          <Property Name="Localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RazonCancelacionProveedor" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="RefPaisIdDestino" Type="Int32" />
+          <Property Name="RefCiudadIdDestino" Type="Int32" />
+          <Property Name="RefDepartamentoIdDestino" Type="Int32" />
+          <Property Name="RefMunicipioIdDestino" Type="Int32" />
+          <Property Name="RefColoniaIdDestino" Type="Int32" />
+          <Property Name="LatitudDestino" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LongitudDestino" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LatitudRefKm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LongitudRefKm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioIdVerifico" Type="Int32" />
+          <Property Name="ObservacionUsuarioVerifico" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaVerfico" Type="DateTime" Precision="3" />
+          <Property Name="EstadoVerifco" Type="Int32" />
+          <Property Name="TelefonoTitularPoliza" Type="Int32" />
+          <Property Name="PlacaReportada" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreaVehiculoSimilar" Type="Boolean" />
+          <Property Name="RefAgenteAsignadoId" Type="Int32" />
+          <Property Name="Reembolso" Type="Int32" />
+          <NavigationProperty Name="help_Atenciones_Servicios" Relationship="Self.FK_help_Atenciones_Servicios_help_Atenciones" FromRole="help_Atenciones" ToRole="help_Atenciones_Servicios" />
+          <NavigationProperty Name="help_Atenciones_Fotografias" Relationship="Self.FK_help_AtencionesFotografias_help_Atenciones" FromRole="help_Atenciones" ToRole="help_Atenciones_Fotografias" />
+          <Property Name="esAppMovil" Type="Int32" />
+          <Property Name="OrigenAtencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="help_Atenciones_Fotografias">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RefAtencionId" Type="Int32" Nullable="false" />
+          <Property Name="Fotografia" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="RefUsuarioId" Type="Int32" Nullable="false" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Latitud" Type="Double" />
+          <Property Name="Longitud" Type="Double" />
+          <Property Name="NombreFoto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TipoFoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefTipoId" Type="Int32" />
+          <Property Name="NombreFirmante" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="FechaFirma" Type="DateTime" Precision="3" />
+          <Property Name="Decripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OrigenId" Type="Int32" />
+          <NavigationProperty Name="help_Atenciones" Relationship="Self.FK_help_AtencionesFotografias_help_Atenciones" FromRole="help_Atenciones_Fotografias" ToRole="help_Atenciones" />
+          <Property Name="NombreOriginal" Type="String" MaxLength="260" FixedLength="false" Unicode="true" />
+          <Property Name="HashSha256Cliente" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <Property Name="Extension" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TamanoBytes" Type="Int64" />
+          <Property Name="AnchoPixels" Type="Int32" />
+          <Property Name="AltoPixels" Type="Int32" />
+          <Property Name="OrientacionExif" Type="Int16" />
+          <Property Name="TieneExif" Type="Boolean" />
+          <Property Name="FechaCapturaOriginal" Type="DateTime" Precision="3" />
+          <Property Name="OffsetCapturaOriginal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="FuenteFechaCaptura" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="FechaUltimaModificacion" Type="DateTimeOffset" Precision="3" />
+          <Property Name="FechaSeleccionDispositivo" Type="DateTimeOffset" Precision="3" />
+          <Property Name="FabricanteDispositivo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ModeloDispositivo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SoftwareEdicion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="AltitudExifMetros" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PrecisionGpsExif" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="HashSha256Servidor" Type="String" MaxLength="64" FixedLength="true" Unicode="false" />
+          <Property Name="HashCoincide" Type="Boolean" />
+          <Property Name="AlgoritmoHash" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="MetadataJson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="help_Atenciones_Servicios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RefAtencionId" Type="Int32" Nullable="false" />
+          <Property Name="RefTipoServicioId" Type="Int32" Nullable="false" />
+          <Property Name="FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RefAgenteId" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RefProveedorId" Type="Int32" />
+          <Property Name="RefIdEstado" Type="Int32" />
+          <Property Name="Kilometraje" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KilometrajePrecio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KilometrajeValorTotal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PrecioUnitario" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioCobertura" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Precio_Evento" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="PrecioTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TasaCambio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Pactado" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Evento" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TipoCosto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CostoBase" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoMaterialHogar" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_Cliente" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_CIA" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Costo_Excedido_Cliente_TC" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OtrosCostos" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoServicio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedido" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedidoConvenio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PorcentajeComision" Type="Int32" />
+          <Property Name="ValorComision" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoTotal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PagadoClienteHELP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PagadoClienteProveedor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ValorConvenio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ComisionConvenio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DescuentoHelp" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CoberturaHELP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CxPProveedor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoHELP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="QuienCobroExcesoCliente" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="FormaPagoExcesoCliente" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ReferenciaPagoExceso" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="QuienCobroMateriales" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="FormaPagoMateriales" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="FechaFinalizacion" Type="DateTime" Precision="3" />
+          <Property Name="ReferenciaPagoMateriales" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="RefProveedorAgenteId" Type="Int32" />
+          <Property Name="RefAutorizacionPrecioEvento" Type="Int32" />
+          <Property Name="RefUsuarioAutorizacionPrecioEvento" Type="Int32" />
+          <Property Name="FechaAutorizacionPrecioEvento" Type="DateTime" Precision="3" />
+          <Property Name="RefAtencionServicioId" Type="Int32" />
+          <Property Name="EstadoPago" Type="Int32" />
+          <Property Name="RanzonCambio" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FechaProgramada" Type="DateTime" Precision="3" />
+          <Property Name="CostoTotalAnterior" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CostoExcedidoAnterior" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CxPProveedorAnterior" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CuentaContable" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CentroCosto" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="BeneficioCodigo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BeneficioNombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoSoftland" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PorcentajeComisionReferencia" Type="Int32" />
+          <Property Name="ValorComisionReferencia" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DescripcionItem" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="CoberturaReconocidaConvenio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MontoEvento" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="QuienCobroOtrosCostos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FormaPagoOtrosCostos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReferenciaPagoOtrosCostos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ValidacionPendiente" Type="Boolean" />
+          <Property Name="IdUsuarioRegistro" Type="Int32" />
+          <Property Name="FechaUsuarioRegistro" Type="DateTime" Precision="3" />
+          <Property Name="IdUsuarioCierre" Type="Int32" />
+          <Property Name="FechaUsuarioCierre" Type="DateTime" Precision="3" />
+          <Property Name="ProveedorPagado" Type="Boolean" />
+          <NavigationProperty Name="help_Atenciones" Relationship="Self.FK_help_Atenciones_Servicios_help_Atenciones" FromRole="help_Atenciones_Servicios" ToRole="help_Atenciones" />
+          <Property Name="RefExcedentesId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="help_RefAgenteEstado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Icono" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_help_Atenciones_Servicios_help_Atenciones">
+          <End Role="help_Atenciones" Type="Self.help_Atenciones" Multiplicity="1" />
+          <End Role="help_Atenciones_Servicios" Type="Self.help_Atenciones_Servicios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="help_Atenciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="help_Atenciones_Servicios">
+              <PropertyRef Name="RefAtencionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_help_AtencionesFotografias_help_Atenciones">
+          <End Role="help_Atenciones" Type="Self.help_Atenciones" Multiplicity="1" />
+          <End Role="help_Atenciones_Fotografias" Type="Self.help_Atenciones_Fotografias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="help_Atenciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="help_Atenciones_Fotografias">
+              <PropertyRef Name="RefAtencionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="helpEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="help_Atenciones" EntityType="Self.help_Atenciones" />
+          <EntitySet Name="help_Atenciones_Fotografias" EntityType="Self.help_Atenciones_Fotografias" />
+          <EntitySet Name="help_Atenciones_Servicios" EntityType="Self.help_Atenciones_Servicios" />
+          <EntitySet Name="help_RefAgenteEstado" EntityType="Self.help_RefAgenteEstado" />
+          <AssociationSet Name="FK_help_Atenciones_Servicios_help_Atenciones" Association="Self.FK_help_Atenciones_Servicios_help_Atenciones">
+            <End Role="help_Atenciones" EntitySet="help_Atenciones" />
+            <End Role="help_Atenciones_Servicios" EntitySet="help_Atenciones_Servicios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_help_AtencionesFotografias_help_Atenciones" Association="Self.FK_help_AtencionesFotografias_help_Atenciones">
+            <End Role="help_Atenciones" EntitySet="help_Atenciones" />
+            <End Role="help_Atenciones_Fotografias" EntitySet="help_Atenciones_Fotografias" />
+          </AssociationSet>
+          <FunctionImport Name="help_F_Api_Obtener_Mi_Atencion" IsComposable="true" ReturnType="Collection(helpModel.help_F_Api_Obtener_Mi_Atencion_Result)">
+          <Parameter Name="IdAtencion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="help_P_SetSeguimiento_Manual_Mejorado">
+            <Parameter Name="IdAtencion" Mode="In" Type="Int32" />
+            <Parameter Name="IdAtencionServicio" Mode="In" Type="Int32" />
+            <Parameter Name="Latitud" Mode="In" Type="Double" />
+            <Parameter Name="Longitud" Mode="In" Type="Double" />
+            <Parameter Name="TipoSeguimiento" Mode="In" Type="Int32" />
+            <Parameter Name="Observacion" Mode="In" Type="String" />
+            <Parameter Name="IdUsuario" Mode="In" Type="Int32" />
+            <Parameter Name="RefEstadoSeguimiento" Mode="In" Type="Int32" />
+            <Parameter Name="RefUsuarioId" Mode="In" Type="Int32" />
+            <Parameter Name="RefEstadoSeguimientoUpdate" Mode="In" Type="Int32" />
+            <Parameter Name="Respuesta" Mode="InOut" Type="Int32" />
+            <Parameter Name="Mensaje" Mode="InOut" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="help_F_Api_Obtener_Mi_Atencion_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Poliza" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Plan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Certificado" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="RefIdentificacionTipo" Nullable="true" />
+          <Property Type="String" Name="Identificacion" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TelefonoOrigen" Nullable="true" />
+          <Property Type="String" Name="Cliente" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="RefTipoServicioId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RefAgenteId" Nullable="true" />
+          <Property Type="Int32" Name="RefProveedorId" Nullable="true" />
+          <Property Type="Int32" Name="RefClienteId" Nullable="true" />
+          <Property Type="Int32" Name="RefEstadoId" Nullable="true" />
+          <Property Type="Int32" Name="RefCiudadId" Nullable="true" />
+          <Property Type="Int32" Name="RefColoniaId" Nullable="true" />
+          <Property Type="DateTime" Name="FechaPagoCliente" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdPoliza" Nullable="true" />
+          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Observaciones" Nullable="true" MaxLength="500" />
+          <Property Type="Double" Name="LatitudCliente" Nullable="true" />
+          <Property Type="Double" Name="LongitudCliente" Nullable="true" />
+          <Property Type="Int32" Name="RefGestorId" Nullable="true" />
+          <Property Type="Time" Name="TiempoMaximoEspera" Nullable="true" />
+          <Property Type="Int32" Name="IdEstadoAtencion" Nullable="false" />
+          <Property Type="String" Name="LbEstado" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ColorEstado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LbTipoServicio" Nullable="false" MaxLength="150" />
+          <Property Type="Int32" Name="IdCategoriaServicio" Nullable="false" />
+          <Property Type="Int32" Name="IdCategoria" Nullable="false" />
+          <Property Type="String" Name="LbCategoriaServicio" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="IconClassName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="UsuarioRegistroNombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LbConvenio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="LbPlan" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NombreProveedor" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Pais" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="RefPaisId" Nullable="true" />
+          <Property Type="String" Name="Zona" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="DireccionDestino" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="EstadoServicio" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Ciudad" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Colonia" Nullable="false" MaxLength="150" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="helpModelStoreContainer" CdmEntityContainer="helpEntities">
+          <EntitySetMapping Name="help_Atenciones">
+            <EntityTypeMapping TypeName="helpModel.help_Atenciones">
+              <MappingFragment StoreEntitySet="help_Atenciones">
+                <ScalarProperty Name="OrigenAtencion" ColumnName="OrigenAtencion" />
+                <ScalarProperty Name="esAppMovil" ColumnName="esAppMovil" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Poliza" ColumnName="Poliza" />
+                <ScalarProperty Name="Certificado" ColumnName="Certificado" />
+                <ScalarProperty Name="RefIdentificacionTipo" ColumnName="RefIdentificacionTipo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="TelefonoOrigen" ColumnName="TelefonoOrigen" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="RefTipoServicioId" ColumnName="RefTipoServicioId" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="RefAgenteId" ColumnName="RefAgenteId" />
+                <ScalarProperty Name="RefProveedorId" ColumnName="RefProveedorId" />
+                <ScalarProperty Name="RefClienteId" ColumnName="RefClienteId" />
+                <ScalarProperty Name="RefEstadoId" ColumnName="RefEstadoId" />
+                <ScalarProperty Name="RefCiudadId" ColumnName="RefCiudadId" />
+                <ScalarProperty Name="RefColoniaId" ColumnName="RefColoniaId" />
+                <ScalarProperty Name="PagoCliente" ColumnName="PagoCliente" />
+                <ScalarProperty Name="FechaPagoCliente" ColumnName="FechaPagoCliente" />
+                <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="LatitudCliente" ColumnName="LatitudCliente" />
+                <ScalarProperty Name="LongitudCliente" ColumnName="LongitudCliente" />
+                <ScalarProperty Name="RefGestorId" ColumnName="RefGestorId" />
+                <ScalarProperty Name="RazonCancelacion" ColumnName="RazonCancelacion" />
+                <ScalarProperty Name="TelefonoReportante" ColumnName="TelefonoReportante" />
+                <ScalarProperty Name="PersonaReporta" ColumnName="PersonaReporta" />
+                <ScalarProperty Name="IdConvenio" ColumnName="IdConvenio" />
+                <ScalarProperty Name="NombreConvenio" ColumnName="NombreConvenio" />
+                <ScalarProperty Name="RefPaisId" ColumnName="RefPaisId" />
+                <ScalarProperty Name="Zona" ColumnName="Zona" />
+                <ScalarProperty Name="DireccionDestino" ColumnName="DireccionDestino" />
+                <ScalarProperty Name="NombreCorredor" ColumnName="NombreCorredor" />
+                <ScalarProperty Name="PolizaExterna" ColumnName="PolizaExterna" />
+                <ScalarProperty Name="NombreConductor" ColumnName="NombreConductor" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="TelefonoAdicional" ColumnName="TelefonoAdicional" />
+                <ScalarProperty Name="NombreAdicional" ColumnName="NombreAdicional" />
+                <ScalarProperty Name="DatosOrigen" ColumnName="DatosOrigen" />
+                <ScalarProperty Name="RefPlanId" ColumnName="RefPlanId" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="SubEmpresa" ColumnName="SubEmpresa" />
+                <ScalarProperty Name="AutorizacionEstado" ColumnName="AutorizacionEstado" />
+                <ScalarProperty Name="TiempoCreacion" ColumnName="TiempoCreacion" />
+                <ScalarProperty Name="TiempoRegistro" ColumnName="TiempoRegistro" />
+                <ScalarProperty Name="TiempoAsignacion" ColumnName="TiempoAsignacion" />
+                <ScalarProperty Name="FechaDeAccidente" ColumnName="FechaDeAccidente" />
+                <ScalarProperty Name="Taller" ColumnName="Taller" />
+                <ScalarProperty Name="HoraDeAccidente" ColumnName="HoraDeAccidente" />
+                <ScalarProperty Name="HoraAsigancionProveedor" ColumnName="HoraAsigancionProveedor" />
+                <ScalarProperty Name="ServicioAutorizadoPorFICO" ColumnName="ServicioAutorizadoPorFICO" />
+                <ScalarProperty Name="MotivoAutorizadoPorFICO" ColumnName="MotivoAutorizadoPorFICO" />
+                <ScalarProperty Name="Parentesco" ColumnName="Parentesco" />
+                <ScalarProperty Name="Llantas" ColumnName="Llantas" />
+                <ScalarProperty Name="Cristales" ColumnName="Cristales" />
+                <ScalarProperty Name="Reserva1" ColumnName="Reserva1" />
+                <ScalarProperty Name="Reserva2" ColumnName="Reserva2" />
+                <ScalarProperty Name="Reserva3" ColumnName="Reserva3" />
+                <ScalarProperty Name="RefDepartamentoId" ColumnName="RefDepartamentoId" />
+                <ScalarProperty Name="RefMunicipioId" ColumnName="RefMunicipioId" />
+                <ScalarProperty Name="TipoSiniestro" ColumnName="TipoSiniestro" />
+                <ScalarProperty Name="TipoVehiculo" ColumnName="TipoVehiculo" />
+                <ScalarProperty Name="NumeroUnidad" ColumnName="NumeroUnidad" />
+                <ScalarProperty Name="Deducible" ColumnName="Deducible" />
+                <ScalarProperty Name="ValorReserva" ColumnName="ValorReserva" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="CAMPOTEMPIDATENCION" ColumnName="CAMPOTEMPIDATENCION" />
+                <ScalarProperty Name="CorreoCliente" ColumnName="CorreoCliente" />
+                <ScalarProperty Name="RefUsuarioCierreId" ColumnName="RefUsuarioCierreId" />
+                <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+                <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+                <ScalarProperty Name="RazonCancelacionProveedor" ColumnName="RazonCancelacionProveedor" />
+                <ScalarProperty Name="RefPaisIdDestino" ColumnName="RefPaisIdDestino" />
+                <ScalarProperty Name="RefCiudadIdDestino" ColumnName="RefCiudadIdDestino" />
+                <ScalarProperty Name="RefDepartamentoIdDestino" ColumnName="RefDepartamentoIdDestino" />
+                <ScalarProperty Name="RefMunicipioIdDestino" ColumnName="RefMunicipioIdDestino" />
+                <ScalarProperty Name="RefColoniaIdDestino" ColumnName="RefColoniaIdDestino" />
+                <ScalarProperty Name="LatitudDestino" ColumnName="LatitudDestino" />
+                <ScalarProperty Name="LongitudDestino" ColumnName="LongitudDestino" />
+                <ScalarProperty Name="LatitudRefKm" ColumnName="LatitudRefKm" />
+                <ScalarProperty Name="LongitudRefKm" ColumnName="LongitudRefKm" />
+                <ScalarProperty Name="UsuarioIdVerifico" ColumnName="UsuarioIdVerifico" />
+                <ScalarProperty Name="ObservacionUsuarioVerifico" ColumnName="ObservacionUsuarioVerifico" />
+                <ScalarProperty Name="FechaVerfico" ColumnName="FechaVerfico" />
+                <ScalarProperty Name="EstadoVerifco" ColumnName="EstadoVerifco" />
+                <ScalarProperty Name="TelefonoTitularPoliza" ColumnName="TelefonoTitularPoliza" />
+                <ScalarProperty Name="PlacaReportada" ColumnName="PlacaReportada" />
+                <ScalarProperty Name="CreaVehiculoSimilar" ColumnName="CreaVehiculoSimilar" />
+                <ScalarProperty Name="RefAgenteAsignadoId" ColumnName="RefAgenteAsignadoId" />
+                <ScalarProperty Name="Reembolso" ColumnName="Reembolso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="help_Atenciones_Fotografias">
+            <EntityTypeMapping TypeName="helpModel.help_Atenciones_Fotografias">
+              <MappingFragment StoreEntitySet="help_Atenciones_Fotografias">
+                <ScalarProperty Name="MetadataJson" ColumnName="MetadataJson" />
+                <ScalarProperty Name="AlgoritmoHash" ColumnName="AlgoritmoHash" />
+                <ScalarProperty Name="HashCoincide" ColumnName="HashCoincide" />
+                <ScalarProperty Name="HashSha256Servidor" ColumnName="HashSha256Servidor" />
+                <ScalarProperty Name="PrecisionGpsExif" ColumnName="PrecisionGpsExif" />
+                <ScalarProperty Name="AltitudExifMetros" ColumnName="AltitudExifMetros" />
+                <ScalarProperty Name="SoftwareEdicion" ColumnName="SoftwareEdicion" />
+                <ScalarProperty Name="ModeloDispositivo" ColumnName="ModeloDispositivo" />
+                <ScalarProperty Name="FabricanteDispositivo" ColumnName="FabricanteDispositivo" />
+                <ScalarProperty Name="FechaSeleccionDispositivo" ColumnName="FechaSeleccionDispositivo" />
+                <ScalarProperty Name="FechaUltimaModificacion" ColumnName="FechaUltimaModificacion" />
+                <ScalarProperty Name="FuenteFechaCaptura" ColumnName="FuenteFechaCaptura" />
+                <ScalarProperty Name="OffsetCapturaOriginal" ColumnName="OffsetCapturaOriginal" />
+                <ScalarProperty Name="FechaCapturaOriginal" ColumnName="FechaCapturaOriginal" />
+                <ScalarProperty Name="TieneExif" ColumnName="TieneExif" />
+                <ScalarProperty Name="OrientacionExif" ColumnName="OrientacionExif" />
+                <ScalarProperty Name="AltoPixels" ColumnName="AltoPixels" />
+                <ScalarProperty Name="AnchoPixels" ColumnName="AnchoPixels" />
+                <ScalarProperty Name="TamanoBytes" ColumnName="TamanoBytes" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="HashSha256Cliente" ColumnName="HashSha256Cliente" />
+                <ScalarProperty Name="NombreOriginal" ColumnName="NombreOriginal" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RefAtencionId" ColumnName="RefAtencionId" />
+                <ScalarProperty Name="Fotografia" ColumnName="Fotografia" />
+                <ScalarProperty Name="RefUsuarioId" ColumnName="RefUsuarioId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="NombreFoto" ColumnName="NombreFoto" />
+                <ScalarProperty Name="TipoFoto" ColumnName="TipoFoto" />
+                <ScalarProperty Name="RefTipoId" ColumnName="RefTipoId" />
+                <ScalarProperty Name="NombreFirmante" ColumnName="NombreFirmante" />
+                <ScalarProperty Name="FechaFirma" ColumnName="FechaFirma" />
+                <ScalarProperty Name="Decripcion" ColumnName="Decripcion" />
+                <ScalarProperty Name="OrigenId" ColumnName="OrigenId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="help_Atenciones_Servicios">
+            <EntityTypeMapping TypeName="helpModel.help_Atenciones_Servicios">
+              <MappingFragment StoreEntitySet="help_Atenciones_Servicios">
+                <ScalarProperty Name="RefExcedentesId" ColumnName="RefExcedentesId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RefAtencionId" ColumnName="RefAtencionId" />
+                <ScalarProperty Name="RefTipoServicioId" ColumnName="RefTipoServicioId" />
+                <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+                <ScalarProperty Name="RefAgenteId" ColumnName="RefAgenteId" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="RefProveedorId" ColumnName="RefProveedorId" />
+                <ScalarProperty Name="RefIdEstado" ColumnName="RefIdEstado" />
+                <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+                <ScalarProperty Name="KilometrajePrecio" ColumnName="KilometrajePrecio" />
+                <ScalarProperty Name="KilometrajeValorTotal" ColumnName="KilometrajeValorTotal" />
+                <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+                <ScalarProperty Name="PrecioCobertura" ColumnName="PrecioCobertura" />
+                <ScalarProperty Name="Precio_Evento" ColumnName="Precio_Evento" />
+                <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+                <ScalarProperty Name="TasaCambio" ColumnName="TasaCambio" />
+                <ScalarProperty Name="Costo_Pactado" ColumnName="Costo_Pactado" />
+                <ScalarProperty Name="Costo_Evento" ColumnName="Costo_Evento" />
+                <ScalarProperty Name="TipoCosto" ColumnName="TipoCosto" />
+                <ScalarProperty Name="CostoBase" ColumnName="CostoBase" />
+                <ScalarProperty Name="CostoMaterialHogar" ColumnName="CostoMaterialHogar" />
+                <ScalarProperty Name="Costo_Excedido_Cliente" ColumnName="Costo_Excedido_Cliente" />
+                <ScalarProperty Name="Costo_Excedido_CIA" ColumnName="Costo_Excedido_CIA" />
+                <ScalarProperty Name="Costo_Excedido_Cliente_TC" ColumnName="Costo_Excedido_Cliente_TC" />
+                <ScalarProperty Name="OtrosCostos" ColumnName="OtrosCostos" />
+                <ScalarProperty Name="CostoServicio" ColumnName="CostoServicio" />
+                <ScalarProperty Name="CostoExcedido" ColumnName="CostoExcedido" />
+                <ScalarProperty Name="CostoExcedidoConvenio" ColumnName="CostoExcedidoConvenio" />
+                <ScalarProperty Name="PorcentajeComision" ColumnName="PorcentajeComision" />
+                <ScalarProperty Name="ValorComision" ColumnName="ValorComision" />
+                <ScalarProperty Name="CostoTotal" ColumnName="CostoTotal" />
+                <ScalarProperty Name="PagadoClienteHELP" ColumnName="PagadoClienteHELP" />
+                <ScalarProperty Name="PagadoClienteProveedor" ColumnName="PagadoClienteProveedor" />
+                <ScalarProperty Name="ValorConvenio" ColumnName="ValorConvenio" />
+                <ScalarProperty Name="ComisionConvenio" ColumnName="ComisionConvenio" />
+                <ScalarProperty Name="DescuentoHelp" ColumnName="DescuentoHelp" />
+                <ScalarProperty Name="CoberturaHELP" ColumnName="CoberturaHELP" />
+                <ScalarProperty Name="CxPProveedor" ColumnName="CxPProveedor" />
+                <ScalarProperty Name="CostoHELP" ColumnName="CostoHELP" />
+                <ScalarProperty Name="QuienCobroExcesoCliente" ColumnName="QuienCobroExcesoCliente" />
+                <ScalarProperty Name="FormaPagoExcesoCliente" ColumnName="FormaPagoExcesoCliente" />
+                <ScalarProperty Name="ReferenciaPagoExceso" ColumnName="ReferenciaPagoExceso" />
+                <ScalarProperty Name="QuienCobroMateriales" ColumnName="QuienCobroMateriales" />
+                <ScalarProperty Name="FormaPagoMateriales" ColumnName="FormaPagoMateriales" />
+                <ScalarProperty Name="FechaFinalizacion" ColumnName="FechaFinalizacion" />
+                <ScalarProperty Name="ReferenciaPagoMateriales" ColumnName="ReferenciaPagoMateriales" />
+                <ScalarProperty Name="RefProveedorAgenteId" ColumnName="RefProveedorAgenteId" />
+                <ScalarProperty Name="RefAutorizacionPrecioEvento" ColumnName="RefAutorizacionPrecioEvento" />
+                <ScalarProperty Name="RefUsuarioAutorizacionPrecioEvento" ColumnName="RefUsuarioAutorizacionPrecioEvento" />
+                <ScalarProperty Name="FechaAutorizacionPrecioEvento" ColumnName="FechaAutorizacionPrecioEvento" />
+                <ScalarProperty Name="RefAtencionServicioId" ColumnName="RefAtencionServicioId" />
+                <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+                <ScalarProperty Name="RanzonCambio" ColumnName="RanzonCambio" />
+                <ScalarProperty Name="FechaProgramada" ColumnName="FechaProgramada" />
+                <ScalarProperty Name="CostoTotalAnterior" ColumnName="CostoTotalAnterior" />
+                <ScalarProperty Name="CostoExcedidoAnterior" ColumnName="CostoExcedidoAnterior" />
+                <ScalarProperty Name="CxPProveedorAnterior" ColumnName="CxPProveedorAnterior" />
+                <ScalarProperty Name="CuentaContable" ColumnName="CuentaContable" />
+                <ScalarProperty Name="CentroCosto" ColumnName="CentroCosto" />
+                <ScalarProperty Name="BeneficioCodigo" ColumnName="BeneficioCodigo" />
+                <ScalarProperty Name="BeneficioNombre" ColumnName="BeneficioNombre" />
+                <ScalarProperty Name="CodigoSoftland" ColumnName="CodigoSoftland" />
+                <ScalarProperty Name="PorcentajeComisionReferencia" ColumnName="PorcentajeComisionReferencia" />
+                <ScalarProperty Name="ValorComisionReferencia" ColumnName="ValorComisionReferencia" />
+                <ScalarProperty Name="DescripcionItem" ColumnName="DescripcionItem" />
+                <ScalarProperty Name="CoberturaReconocidaConvenio" ColumnName="CoberturaReconocidaConvenio" />
+                <ScalarProperty Name="MontoEvento" ColumnName="MontoEvento" />
+                <ScalarProperty Name="QuienCobroOtrosCostos" ColumnName="QuienCobroOtrosCostos" />
+                <ScalarProperty Name="FormaPagoOtrosCostos" ColumnName="FormaPagoOtrosCostos" />
+                <ScalarProperty Name="ReferenciaPagoOtrosCostos" ColumnName="ReferenciaPagoOtrosCostos" />
+                <ScalarProperty Name="ValidacionPendiente" ColumnName="ValidacionPendiente" />
+                <ScalarProperty Name="IdUsuarioRegistro" ColumnName="IdUsuarioRegistro" />
+                <ScalarProperty Name="FechaUsuarioRegistro" ColumnName="FechaUsuarioRegistro" />
+                <ScalarProperty Name="IdUsuarioCierre" ColumnName="IdUsuarioCierre" />
+                <ScalarProperty Name="FechaUsuarioCierre" ColumnName="FechaUsuarioCierre" />
+                <ScalarProperty Name="ProveedorPagado" ColumnName="ProveedorPagado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="help_RefAgenteEstado">
+            <EntityTypeMapping TypeName="helpModel.help_RefAgenteEstado">
+              <MappingFragment StoreEntitySet="help_RefAgenteEstado">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Icono" ColumnName="Icono" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="help_F_Api_Obtener_Mi_Atencion" FunctionName="helpModel.Store.help_F_Api_Obtener_Mi_Atencion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="helpModel.help_F_Api_Obtener_Mi_Atencion_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Poliza" ColumnName="Poliza" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="Certificado" ColumnName="Certificado" />
+                <ScalarProperty Name="RefIdentificacionTipo" ColumnName="RefIdentificacionTipo" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="TelefonoOrigen" ColumnName="TelefonoOrigen" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="RefTipoServicioId" ColumnName="RefTipoServicioId" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="RefAgenteId" ColumnName="RefAgenteId" />
+                <ScalarProperty Name="RefProveedorId" ColumnName="RefProveedorId" />
+                <ScalarProperty Name="RefClienteId" ColumnName="RefClienteId" />
+                <ScalarProperty Name="RefEstadoId" ColumnName="RefEstadoId" />
+                <ScalarProperty Name="RefCiudadId" ColumnName="RefCiudadId" />
+                <ScalarProperty Name="RefColoniaId" ColumnName="RefColoniaId" />
+                <ScalarProperty Name="FechaPagoCliente" ColumnName="FechaPagoCliente" />
+                <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="LatitudCliente" ColumnName="LatitudCliente" />
+                <ScalarProperty Name="LongitudCliente" ColumnName="LongitudCliente" />
+                <ScalarProperty Name="RefGestorId" ColumnName="RefGestorId" />
+                <ScalarProperty Name="TiempoMaximoEspera" ColumnName="TiempoMaximoEspera" />
+                <ScalarProperty Name="IdEstadoAtencion" ColumnName="IdEstadoAtencion" />
+                <ScalarProperty Name="LbEstado" ColumnName="LbEstado" />
+                <ScalarProperty Name="ColorEstado" ColumnName="ColorEstado" />
+                <ScalarProperty Name="LbTipoServicio" ColumnName="LbTipoServicio" />
+                <ScalarProperty Name="IdCategoriaServicio" ColumnName="IdCategoriaServicio" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="LbCategoriaServicio" ColumnName="LbCategoriaServicio" />
+                <ScalarProperty Name="IconClassName" ColumnName="IconClassName" />
+                <ScalarProperty Name="UsuarioRegistroNombre" ColumnName="UsuarioRegistroNombre" />
+                <ScalarProperty Name="LbConvenio" ColumnName="LbConvenio" />
+                <ScalarProperty Name="LbPlan" ColumnName="LbPlan" />
+                <ScalarProperty Name="NombreProveedor" ColumnName="NombreProveedor" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="RefPaisId" ColumnName="RefPaisId" />
+                <ScalarProperty Name="Zona" ColumnName="Zona" />
+                <ScalarProperty Name="DireccionDestino" ColumnName="DireccionDestino" />
+                <ScalarProperty Name="EstadoServicio" ColumnName="EstadoServicio" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="help_P_SetSeguimiento_Manual_Mejorado" FunctionName="helpModel.Store.help_P_SetSeguimiento_Manual_Mejorado" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
