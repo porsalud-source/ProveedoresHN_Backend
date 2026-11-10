@@ -315,6 +315,7 @@
     <Compile Include="Clases\TokenValidator.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\TrackingController.cs" />
     <Compile Include="Controllers\SeleccionMultipleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -641,6 +642,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Sql\TrackingPoints.sql" />
     <Content Include="Models\HELP.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HELP.edmx</DependentUpon>
